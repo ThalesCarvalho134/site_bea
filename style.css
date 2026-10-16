@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    padding: 10px;
+    background-color: #000000;
+}
+
+div#all {
+    
+    background: linear-gradient(-0deg, #2a2a2a, #1a1a1a, #0b0b0b, #0a0a0a);
+  border-radius: 10px;
+    width: 100%;
+    color: #FFFFFF;
+    display: block;
+}
+
+/*CABEÇALHO*/
+
+.container-titulo {
+    width: 100%;
+    overflow: hidden;
+}
+
+#textogrande {
+    display: inline-block;
+    white-space: nowrap;
+    animation: deslizar-infinito 10s linear infinite;
+    
+    /* Inclinação do texto */
+    transform: skewX(-45deg); /* Ajuste esse valor para o ângulo que preferir */
+}
+
+#textogrande span {
+    font-family: "Bungee", sans-serif;
+    font-size:  70pt;
+    background: linear-gradient(-45deg, #8a2be2, #ff9900);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    /* Diminui o espaço entre as frases */
+    margin-right: -10px; /* Se estiver muito longe, coloque valores negativos aqui */
+    padding: 0 20px;     /* Ajusta o espaço interno entre as palavras */
+}
+
+@keyframes deslizar-infinito {
+    0%   { transform: translate(0, 0); }
+    /* Move apenas metade da largura, pois agora temos duas cópias */
+    100% { transform: translate(-75%, 0); }
+}
+
+/* Aplicamos o gradiente e a fonte nos spans para garantir o visual */
+
+p#sub{
+  font-family: "Lobster Two", sans-serif;
+}
+
+/*FIM DO CABEÇALHO*/
+/*BOTOES DE SESSAO*/
+
+nav#navegar {
+    margin: 0;
+    width: 100%;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+     border-image: url('imagens/bordapapel.png') 60 stretch;
+    background-color: #707070;
+    /* 1. Defina a cor de fundo desejada */
+  /* Ou a cor que você quiser */
+  
+  /* 2. Garante que o fundo não pinte a área da borda */
+  background-clip: padding-box; 
+}
+
+nav#navegar a {
+  opacity: 0;
+  padding: 1px;
+    display: flex; /* Mantém o conteúdo centralizado */
+  width: 100%;   /* Faz o link ocupar toda a largura do li */
+  height: 100%;  /* Faz o link ocupar toda a altura do li */
+  text-decoration: none; /* Remove o sublinhado */
+  justify-content: center;
+  align-items: center;
+    margin: 5px;
+  background: rgba(30, 30, 30, 0.0);
+  text-decoration: none;
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+ul {
+  display: flex;
+  flex-direction: column; /* Organiza um embaixo do outro */
+  align-items: center;    /* Centraliza os itens na horizontal */
+  padding: 0;             /* Remove o espaçamento padrão da lista */
+  list-style: none;       /* Remove as bolinhas da lista */
+}
+
+li {
+  background: rgba(30, 30, 30, 1);
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: ;
+  border: 1px solid #000000;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 20px 20px 20px 0px;
+    width: 80%; /* Defina o tamanho que você quer */
+  height: 80px;
+  overflow: hidden; /* Garante que a imagem não vaze para fora */
+  list-style: none; /* Remove a bolinha do li */
+    transition: transform 0.5s ease;
+}
+li:hover {
+  transform: scale(1.10); /* Dá um efeito de leve "salto" ao passar o mouse */
+}
+
+li#nj {
+    background-image: url('imagens/newjeans banner.jpg');
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+}
+li#ae {
+    background-image: url('imagens/aespa banner.jpg');
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+}
+li#le {
+    background-image: url('imagens/lesserafim banner.jpg');
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+}
+
+/*FIM DOS BOTOES DE SESSAO*/
+
+/*NEWJEANS SESSAO NEWJEANS SESSAO NEWJEANS SESSAO*/
+
+section#newjeans {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('imagens/newjeans bg.jpg');
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+  overflow: hidden; /* Garante que a imagem não vaze para fora */
+    padding-bottom: 80px;
+  margin: 20px 0px 20px 0px;   
+  width: 100%;
+    min-height: 90vh;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0); 
+  border-radius: 5px;
+  position: relative;
+}
+
+/*PLAYER DE AUDIO*/
+
+section#player{
+background: rgba(0,0,0,.55);
+backdrop-filter: blur(6px);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:12px;
+width:80%;
+min-height:120px;
+  height: auto;
+padding:16px;
+margin:12px auto;
+border-radius:24px;
+border:2px solid rgba(255,255,255,.15);
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+.player-header{
+  width:90%;
+  text-align:center;
+  margin: auto;
+}
+
+p#dittoinstrumental{
+font-family:"Press Start 2P", system-ui;
+font-size:clamp(.7rem,2vw,1rem);
+margin:.7rem;
+background: linear-gradient(to right,#ff3366,#ffcc00);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.controles-audio{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+width:100%;
+}
+
+#btn-play-pause,#btn-mute,#btn-prev,#btn-next{
+background:rgba(255,255,255,.08);
+border:none;
+border-radius:14px;
+cursor:pointer;
+padding:10px;
+min-width:52px;
+min-height:52px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.3rem;
+color:white;
+}
+
+#btn-play-pause img,#btn-mute img{
+width:32px;
+height:32px;
+object-fit:contain;
+}
+
+.display-tempo{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.icone-separador{
+width:24px;
+height:12px;
+object-fit:fill;
+}
+
+#tempo-atual,#tempo-total{
+font-family:"Press Start 2P", system-ui;
+font-size:10px;
+background:linear-gradient(to right,#ff3366,#ffcc00);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+audio#dittoaudio{display:none;}
+
+@media (max-width:600px){
+section#player{width:95%;}
+#btn-play-pause,#btn-mute,#btn-prev,#btn-next{
+min-width:46px;
+min-height:46px;
+}
+}
+
+/*FIM DO PLAYER DE AUDIO*/
+
+/*MOLDURA DE FOTOS*/
+
+div#moldura {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 95%;
+  margin: 30px;
+}
+
+
+/* Container que define a moldura interna onde as fotos aparecem */
+.container-foto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 85%;
+    overflow: hidden; /* Garante que a imagem não vaze para fora */
+  border: 25px solid #FFFFFF;
+  border-bottom: 70px solid #ffffff;
+    margin: auto;
+}
+
+/* Esconde todas as imagens por padrão */
+.container-foto img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Mostra apenas a imagem que possui a classe 'carousel' */
+.container-foto img.carousel {
+    display: flex;
+  opacity: 1;
+  border: 5px solid #000000;
+}
+p#prox {
+  font-family: "Lobster Two", sans-serif;
+  font-size: clamp(1rem, 1.25rem + 0.5vw, 1.5rem);
+}
+
+/*BOTAO QUIZ*/
+
+.btn-iniciar {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 20px 20px 20px 0px;
+    width: 60%; /* Defina o tamanho que você quer */
+  height: 40px;
+  overflow: hidden; /* Garante que a imagem não vaze para fora */
+  font-family: "Press Start 2P", system-ui; 
+  color: #fff;
+-webkit-text-stroke: 1px #ff69b4;
+  border: 2px solid #000000;
+  background-image: url('imagens/newjeans banner2.jpg');
+  filter: brightness(80%);
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+  text-decoration: none; /* Remove o sublinhado */
+  
+}
+
+section#aespa {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('imagens/aespa bg.jpg');
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+  overflow: hidden; /* Garante que a imagem não vaze para fora */
+    padding-bottom: 80px;
+  margin: 20px 0px 20px 0px;   
+  width: 100%;
+    min-height: 90vh;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0); 
+  border-radius: 5px;
+}
+div#in-progress {
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #0b0b0b;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: auto;
+  backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 20px;
+}
+img#in-progress {
+  max-width: 80%;
+}
+p#in-progress {
+  font-family: "Lobster Two", sans-serif;
+    font-size: clamp(1rem, 1.25rem + 0.5vw, 1.5rem);
+}
+
+
+
+section#lesserafim {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('imagens/lesserafim bg.jpg');
+  background-size: cover;          /* Isso equivale ao object-fit: cover */
+  background-position: center;     /* Centraliza a imagem */
+  background-repeat: no-repeat;    /* Evita que a imagem se repita */
+  overflow: hidden; /* Garante que a imagem não vaze para fora */
+    padding-bottom: 80px;
+  margin: 20px 0px 20px 0px;   
+  width: 100%;
+    min-height: 85vh;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0); 
+    border-radius: 5px;
+}
+div#in-progress {
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #0b0b0b;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: auto;
+  backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 20px;
+}
+img#in-progress {
+  max-width: 80%;
+}
+p#in-progress {
+  font-family: "Lobster Two", sans-serif;
+    font-size: clamp(1rem, 1.25rem + 0.5vw, 1.5rem);
+}
+
+.moldura-quiz {
+    background: #1a1a1a;
+    border: 4px solid #ff9900;
+    padding: 30px;
+    max-width: 500px;
+    margin: 50px auto;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 15px;
+}
+
+#opcoes-container button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: 2px solid #ff3366;
+    cursor: pointer;
+}
+
+#opcoes-container input {
+    padding: 10px;
+    width: 70%;
+}
+
+
+
+
+footer {
+    background-color: #000000;
+    margin-top: 50px;
+    padding: 20px;
+    height: 400px;
+}
+#btn-prev,#btn-next{margin:0 4px;padding:6px 10px;border-radius:8px;cursor:pointer;}
